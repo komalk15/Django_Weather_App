@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>Weather App</h1>
+    </div>
+    <form method ="POST">
+        {%csrf_token %}
+        <input type ="text" name="" placeholder = "Enter city">
+        <button type ="submit">search</button>
+    </form>
+    <div class ="weather">
+        <div class ="left">
+            <h2>{{temp}}&#176;</h2>
+            <h3>{{city}}</h3>
+
+        </div>
+    </div>
+    <div class = "right">
+        <div class ="icon">
+            <p><img src = "http://openweathermap.org/img/w/{{icon}}.png" width = 100px"></p>
+        </div>
+        <div class = "condition">
+            s
+        </div>
+    </div>
+</body>
+</html>
